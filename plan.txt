@@ -1,2 +1,4 @@
 일단 spacy를 쓸 수는 없음.
 BPE tokenizer 사용(구현)
+    완료
+LSTM 사용하기
