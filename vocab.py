@@ -23,11 +23,6 @@ def merge_dictionary(pair, v_in):
         v_out[w_out] = v_in[word]#그걸 다시 key로 등록
     return v_out
 
-
-
-
-
-
 def get_pairs(word):
     """Return set of symbol pairs in a word.
     Word is represented as a tuple of symbols (symbols being variable-length strings).
@@ -39,13 +34,9 @@ def get_pairs(word):
         prev_char = char
     return pairs
 
-
-
-
 class Vocabulary:
     #byte-pair encoded vocab
     def __init__(self, document, num_merges = 10000):
-
         ## <PAD> -> padding, used for padding the shorter sentences in a batch to match the length of longest sentence in the batch
         ## <UNK> -> words which are not found in the vocab are replace by this token
         if exists('./vocab.pickle'):
@@ -92,7 +83,6 @@ class Vocabulary:
 
             self.wtoi[best] = i+value_max+1
             self.wtoi_reverse[best[0] + best[1]] = best
-
 
     def count_characters(self, sentences):
         value_max = max(self.wtoi.values())
@@ -170,8 +160,11 @@ class Vocabulary:
         for word in spaced:
             tokenized = tokenized + self.encode(word)
         return tokenized
+
     def itow_(self, tokenlist):
         return ''.join(list(map(lambda x: self.itow[x], tokenlist)))
+
+"""
 import pandas as pd
 df = pd.read_csv('./Data/train.csv')
 test_doc = df['text'].values.tolist()
@@ -181,3 +174,4 @@ for i in range(100):
     tokenized = test_vocab(sentences)
     print(tokenized)
     print(test_vocab.itow_(tokenized))
+"""
