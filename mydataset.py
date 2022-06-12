@@ -10,9 +10,9 @@ class TextDataset(Dataset):
     def __init__ (self, data_dir, mode):
         self.labeldict = {'ICT':0, 'economy':1, 'education':2, 'mechanics':3}
         self.labeldict_reverse = {i:w for w,i in self.labeldict.items()}
-        df = pd.read_csv(os.path.join(data_dir, mode + '.csv'))
-        self.sentences = df['text'].values
-        self.labels = df['label'].values
+        self.df_source = pd.read_csv(os.path.join(data_dir, mode + '.csv'))
+        self.sentences = self.df_source['text'].values
+        self.labels = self.df_source['label'].values
         self.vocab = Vocabulary("already",100)#vocab은 이미 만들어짐
 
     def __len__(self):

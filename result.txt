@@ -1,4 +1,4 @@
-Test Accuracy : 0.80000
+Test Accuracy : 0.89000
 true label  |  predict label 
 -------------------------- 
    economy   economy
@@ -14,7 +14,7 @@ true label  |  predict label
  mechanics mechanics
  mechanics       ICT
        ICT       ICT
- education mechanics
+ education education
        ICT       ICT
    economy education
    economy       ICT
@@ -30,7 +30,7 @@ true label  |  predict label
  education education
  education education
    economy   economy
-       ICT mechanics
+       ICT       ICT
        ICT       ICT
  mechanics mechanics
  education mechanics
@@ -41,8 +41,8 @@ true label  |  predict label
  education education
        ICT       ICT
        ICT       ICT
-       ICT education
        ICT mechanics
+       ICT       ICT
    economy   economy
        ICT       ICT
        ICT       ICT
@@ -50,7 +50,7 @@ true label  |  predict label
    economy   economy
  mechanics mechanics
        ICT       ICT
-       ICT mechanics
+       ICT       ICT
  education education
  education education
        ICT       ICT
@@ -79,11 +79,11 @@ true label  |  predict label
  mechanics mechanics
  education education
    economy   economy
- mechanics       ICT
+ mechanics mechanics
        ICT       ICT
    economy   economy
- mechanics       ICT
-       ICT mechanics
+ mechanics mechanics
+       ICT       ICT
  education       ICT
    economy   economy
    economy   economy
@@ -97,7 +97,7 @@ true label  |  predict label
    economy   economy
  mechanics mechanics
        ICT       ICT
- mechanics       ICT
+ mechanics mechanics
    economy   economy
        ICT       ICT
- education   economy
+ education education

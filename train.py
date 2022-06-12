@@ -69,9 +69,9 @@ if __name__ == '__main__':
     parser.add_argument('--data_dir', type=str, default='./Data')
     parser.add_argument('--batch_size', type=int, default=64, help="Batch size for training (default: 64)")
     parser.add_argument('--batch_first', action='store_true', help="If true, then the model returns the batch first")
-    parser.add_argument('--learning_rate', type=float, default=0.001, help="Learning rate (default: 0.001)")
+    parser.add_argument('--learning_rate', type=float, default=4e-7, help="Learning rate (default: 0.001)")
     parser.add_argument('--num_epochs', type=int, default=5, help="Number of epochs to train for (default: 5)")
-    parser.add_argument('--weight_decay', type=float, default=0.0004, help="weight decay for (default: 0.0004)")
+    parser.add_argument('--weight_decay', type=float, default=4e-5, help="weight decay for (default: 0.0004)")
     args = parser.parse_args()
 
     """
