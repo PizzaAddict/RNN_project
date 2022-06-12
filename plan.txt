@@ -1,8 +1,0 @@
-일단 spacy를 쓸 수는 없음.
-BPE tokenizer 사용(구현)
-    완료
-LSTM 사용하기
-완료
-test까지 implement  완료
-현재 epoch:
-    12까지 완료
