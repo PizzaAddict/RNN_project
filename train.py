@@ -11,10 +11,6 @@ def acc(pred,label):#정확도 측정
     return torch.sum(pred == label).item()
 
 def train(args, data_loader, test_loader, model):
-    """
-    TODO: Change the training code as you need. (e.g. different optimizer, different loss function, etc.)
-            You can add validation code. -> This will increase the accuracy.
-    """
     criterion = torch.nn.CrossEntropyLoss()
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate, weight_decay = args.weight_decay)
     min_loss = np.Inf
