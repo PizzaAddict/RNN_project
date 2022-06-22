@@ -37,8 +37,6 @@ def get_pairs(word):
 class Vocabulary:
     #byte-pair encoded vocab
     def __init__(self, document, num_merges = 10000):
-        ## <PAD> -> padding, used for padding the shorter sentences in a batch to match the length of longest sentence in the batch
-        ## <UNK> -> words which are not found in the vocab are replace by this token
         if exists('./vocab.pickle'):
             with open('./vocab.pickle','rb') as file:
                 data = pickle.load(file)
@@ -96,9 +94,8 @@ class Vocabulary:
         return merged_dict, merged_dict_reverse
 
     def encode(self, orig):#bpe에 의거해서 주어진 단일 word를 잘라서 출력
-        """Encode word based on list of BPE merge operations, which are applied consecutively"""
 
-        word = tuple(orig) + (ENDWORD_TOKEN,)#단어의 끝에 존재하는 unigram인 경우를 체크하려는듯
+        word = tuple(orig) + (ENDWORD_TOKEN,)#단어의 끝에 존재하는 unigram인 경우를 체크
         #display(Markdown("__word split into characters:__ <tt>{}</tt>".format(word)))
 
         pairs = get_pairs(word)

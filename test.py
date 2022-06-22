@@ -35,9 +35,6 @@ if __name__ == '__main__':
     parser.add_argument('--test_data',  type=str, default='test')
     args = parser.parse_args()
 
-    """
-    TODO: You MUST write the same model parameters as in the train.py file !!
-    """
     # Model hyperparameters
     embedding_dim = 256 # embedding dimension
     hidden_dim = 1280  # hidden size of RNN
